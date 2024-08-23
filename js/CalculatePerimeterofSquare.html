@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Calculate Perimeter of Square</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0; /* Light background for the page */
+    }
+
+    pre {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #282c34; /* Ensure this only applies to code blocks */
+        overflow: auto;
+        max-width: 100%;
+    }
+
+    .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #61dafb;
+            border: none;
+            padding: 5px 10px;
+            color: #000;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        .copy-button:active {
+            background-color: #21a1f1;
+        }
+</style>
+</head>
+
+<body>
+    <h1>Calculate Perimeter of Square</h1>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;perimeter of square&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;Calculate perimeter of square&lt;/h3&gt;
+        &lt;form name=&quot;f1&quot;&gt;
+            Enter the side length:-&lt;input type=&quot;number&quot; name=&quot;n1&quot;&gt;&lt;br&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Calculate perimeter&quot; onclick=&quot;peri()&quot;&gt;
+        &lt;/form&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            function peri()
+                {
+                    var s = f1.n1.value;
+                    document.write(&quot;Perimeter of square of side length &quot;+s+&quot; is = &quot;+2*s*s);
+                }
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+<br><br>
+<h3>Calculate perimeter of square</h3>
+        <form name="f1">
+            Enter the side length:-<input type="number" name="n1"><br>
+            <input type="submit" value="Calculate perimeter" onclick="peri()">
+        </form>
+        <script type="text/javascript">
+            function peri()
+                {
+                    var s = f1.n1.value;
+                    document.write("Perimeter of square of side length "+s+" is = "+2*s*s);
+                }
+        </script>
+</body>
+</html>
