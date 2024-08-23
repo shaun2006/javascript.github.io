@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> display tables</title>
+    </head>
+    <body>
+        <h3>Generate table of a given number</h3>
+        <form name="f1">
+        Enter a number:-<input type="number" name="n1"><br>
+        <input type="submit" value="Generate table" onclick="gentable()">
+        </form>
+        <script type="text/javascript">
+            function gentable()
+            {
+                var a = f1.n1.value;
+                for(i=1;i<=10;i++)
+                {
+                    document.write(a+" x "+i+" = "+a*i+"<br>");
+                }
+            
+                
+            }
+        </script>
+    </body>
+</html>
