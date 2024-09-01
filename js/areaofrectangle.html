@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>Area of a rectangle</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0; /* Light background for the page */
+    }
+
+    pre {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #282c34; /* Ensure this only applies to code blocks */
+        overflow: auto;
+        max-width: 100%;
+    }
+
+    .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #61dafb;
+            border: none;
+            padding: 5px 10px;
+            color: #000;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        .copy-button:active {
+            background-color: #21a1f1;
+        }
+</style>
+</head>
+
+<body>
+    <h1>Area of a rectangle</h1>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;area of rectangle&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;Area of a rectangle&lt;/h3&gt;
+        &lt;form name=&quot;f1&quot;&gt;
+            Enter the length:- &lt;input type=&quot;number&quot; name=&quot;n1&quot; required&gt;&lt;br&gt;
+            Enter the width:- &lt;input type=&quot;number&quot; name=&quot;n2&quot; required&gt;&lt;br&gt;
+            Area of rectangle:- &lt;input type=&quot;number&quot; name=&quot;n3&quot; readonly&gt;&lt;br&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;calculate&quot; onclick=&quot;area()&quot;&gt;
+        &lt;/form&gt;
+        &lt;script language=&quot;javascript&quot;&gt;
+            function area()
+            {
+                event.preventDefault();
+                var l,w,a;
+                l = f1.n1.value;
+                w = f1.n2.value;
+                a = l*w;
+                f1.n3.value = &quot;&quot;+a;
+
+            }        
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+<br><br>
+<h3>Area of a rectangle</h3>
+        <form name="f1">
+            Enter the length:- <input type="number" name="n1" required><br>
+            Enter the width:- <input type="number" name="n2" required><br>
+            Area of rectangle:- <input type="number" name="n3" readonly><br>
+            <input type="submit" value="calculate" onclick="area()">
+        </form>
+        <script language="javascript">
+            function area()
+            {
+                event.preventDefault();
+                var l,w,a;
+                l = f1.n1.value;
+                w = f1.n2.value;
+                a = l*w;
+                f1.n3.value = ""+a;
+
+            }        
+        </script>
+</body>
+</html>
