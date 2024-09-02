@@ -6,39 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale-1.0">
 <title>Calculate Perimeter of Square</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
-<style>
-    body {
-        margin: 0;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0; /* Light background for the page */
-    }
-
-    pre {
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #282c34; /* Ensure this only applies to code blocks */
-        overflow: auto;
-        max-width: 100%;
-    }
-
-    .copy-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #61dafb;
-            border: none;
-            padding: 5px 10px;
-            color: #000;
-            cursor: pointer;
-            border-radius: 3px;
-            font-size: 12px;
-        }
-
-        .copy-button:active {
-            background-color: #21a1f1;
-        }
-</style>
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
@@ -102,13 +70,19 @@
         <form name="f1">
             Enter the side length:-<input type="number" name="n1"><br>
             <input type="submit" value="Calculate perimeter" onclick="peri()">
+            <input type="reset" value="Clear" alt="Clear the search form">
         </form>
         <script type="text/javascript">
-            function peri()
+            {function peri()
                 {
+                    event.preventDefault();
                     var s = f1.n1.value;
                     document.write("Perimeter of square of side length "+s+" is = "+2*s*s);
                 }
+            }
         </script>
+<br>
+<br>
+<a href="../index.html">Go back</a>
 </body>
 </html>
