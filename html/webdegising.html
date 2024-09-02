@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>web degising</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> 
+<style>
+    h1{font-family:calibri;
+   font-weight:bold;}
+    p{color: orange;
+    }
+</style>
+</head>
+
+<body>
+    <h2>Web Degising</h2>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;web degising&lt;/title&gt;
+    &lt;style&gt;
+    h1{font-family:calibri;
+    font-weight:bold;}
+    p{color: orange;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;T20 Cricket Match&lt;/h1&gt;
+&lt;p&gt;1. &quot;Powerplay Tactics&quot;: Exploring strategies in the initial overs of T20 matches, emphasizing aggressive batting and strategic bowling.&lt;/p&gt;
+
+&lt;p&gt;2. &quot;Spin Impact&quot;: Analyzing the role of spin bowlers in the middle overs of T20 games, highlighting their ability to control runs and take wickets.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+<br><br>
+<h1>T20 Cricket Match</h1>
+<p>1. "Powerplay Tactics": Exploring strategies in the initial overs of T20 matches, emphasizing aggressive batting and strategic bowling.</p>
+
+<p>2. "Spin Impact": Analyzing the role of spin bowlers in the middle overs of T20 games, highlighting their ability to control runs and take wickets.</p>
+<br>
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>
