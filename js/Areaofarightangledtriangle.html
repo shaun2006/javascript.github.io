@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>>Area of a right angled triangle</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+
+<body>
+    <h1>Area of a right angled triangle</h1>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Area of a right angled triangle&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h3&gt;Area of a right angled triangle&lt;/h3&gt;
+    &lt;form name=&quot;f1&quot;&gt;
+    Enter the height value of the triangle:- &lt;input type=&quot;number&quot; name=&quot;n1&quot; required&gt;&lt;br&gt;
+    Enter the base value of the triangle:- &lt;input type=&quot;number&quot; name=&quot;n2&quot; required&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;calculate&quot; onclick=&quot;area()&quot;&gt;
+    &lt;input type=&quot;reset&quot; value=&quot;Clear&quot; alt=&quot;Clear the search form&quot;&gt;&lt;br&gt;
+    Area of the right angled triangle is:- &lt;input type=&quot;number&quot; name=&quot;n3&quot; readonly&gt;&lt;br&gt;
+    &lt;/form&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    function area()
+        { 
+            event.preventDefault()
+            var h,b,a;
+            h = f1.n1.value;
+            b = f1.n2.value;
+            a = 0.5*b*h;
+            f1.n3.value = &quot;&quot;+a;
+        }
+    &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+    </pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+<br><br>
+<h3>Area of a right angled triangle</h3>
+	<form name="f1">
+	Enter the height value of the triangle:- <input type="number" name="n1" required><br>
+	Enter the base value of the triangle:- <input type="number" name="n2" required><br>
+	<input type="submit" value="calculate" onclick="area()">
+    <input type="reset" value="Clear" alt="Clear the search form"><br>
+	Area of the right angled triangle is:- <input type="number" name="n3" readonly><br>
+	</form>
+	<script type="text/javascript">
+	function area()
+		{ 
+		  event.preventDefault()
+		  var h,b,a;
+		  h = f1.n1.value;
+		  b = f1.n2.value;
+		  a = 0.5*b*h;
+		  f1.n3.value = ""+a;
+		}
+	</script>
+<br>
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

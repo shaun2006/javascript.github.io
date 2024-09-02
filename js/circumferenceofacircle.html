@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title> circumference of a circle</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+
+<body>
+    <h1>circumference of a circle</h1>
+    <pre>
+        <code>
+&lt;!Doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; circumference of a circle&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt; circumference of a circle &lt;/h3&gt;
+            &lt;form name=&quot;f1&quot;&gt;
+                Enter the radius of the circle:- &lt;input type=&quot;number&quot; name=&quot;n1&quot; required&gt;&lt;br&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Calculate&quot; onclick=&quot;circum()&quot;&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Clear&quot; alt=&quot;Clear the search form&quot;&gt;&lt;br&gt;
+                circumference:- &lt;input type=&quot;number&quot; name=&quot;n2&quot; readonly&gt;
+            &lt;/form&gt;
+            &lt;script type=&quot;text/javascript&quot;&gt;
+                function circum(){
+                event.preventDefault();
+                var c,r;
+                r = f1.n1.value;
+                c = 2*3.14*r;
+                f1.n2.value = &quot;&quot;+c;
+                }
+            &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            
+        </code>
+    </pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+<br><br>
+<h3> circumference of a circle </h3>
+            <form name="f1">
+                Enter the radius of the circle:- <input type="number" name="n1" required><br>
+                <input type="submit" value="Calculate" onclick="circum()">
+                <input type="reset" value="Clear" alt="Clear the search form"><br>
+                circumference:- <input type="number" name="n2" readonly>
+            </form>
+            <script type="text/javascript">
+             function circum(){
+                event.preventDefault();
+                var c,r;
+                r = f1.n1.value;
+                c = 2*3.14*r;
+                f1.n2.value = ""+c;
+                }
+            </script>
+<br>
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

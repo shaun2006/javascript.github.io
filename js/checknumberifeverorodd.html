@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+<title>check number if ever or odd</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+
+<body>
+    <h1>check number if ever or odd</h1>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;check number if ever or odd&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;check number if ever or odd&lt;/h3&gt;
+        &lt;form name=&quot;f1&quot; ;&gt;
+            Enter the number:- &lt;input type=&quot;number&quot; name=&quot;n1&quot; required&gt;
+            &lt;br&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Check&quot; onclick=&quot;check1(event)&quot;&gt;
+            &lt;input type=&quot;reset&quot; value=&quot;Clear&quot; alt=&quot;Clear the search form&quot;&gt;&lt;br&gt;
+            Result:- &lt;input type=&quot;text&quot; name=&quot;t1&quot; readonly&gt;
+            &lt;br&gt;
+        &lt;/form&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;
+            function check1(event) {
+                event.preventDefault();
+                var num1 = f1.n1.value;
+                if (num1 == 0) {
+                    f1.t1.value = &quot;Number &quot; + num1 + &quot; is even as well as as odd&quot;;
+                }
+                if (num1 % 2 == 0) {
+                    f1.t1.value = &quot;Number &quot; + num1 + &quot; is even&quot;;
+                } else {
+                    f1.t1.value = &quot;Number &quot; + num1 + &quot; is odd&quot;;
+                }
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;            
+        </code>
+    </pre>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+<br><br>
+<h3>check number if ever or odd</h3>
+        <form name="f1" ;>
+            Enter the number:- <input type="number" name="n1" required>
+            <br>
+            <input type="submit" value="Check" onclick="check1(event)">
+            <input type="reset" value="Clear" alt="Clear the search form"><br>
+            Result:- <input type="text" name="t1" readonly>
+            <br>
+        </form>
+        <script type="text/javascript">
+            function check1(event) {
+                event.preventDefault();
+                var num1 = f1.n1.value;
+                if (num1 == 0) {
+                    f1.t1.value = "Number " + num1 + " is even as well as as odd";
+                }
+                if (num1 % 2 == 0) {
+                    f1.t1.value = "Number " + num1 + " is even";
+                } else {
+                    f1.t1.value = "Number " + num1 + " is odd";
+                }
+            }
+        </script>
+<br>
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>
