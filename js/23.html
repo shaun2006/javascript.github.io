@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Display table of 7 </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1>Display table of 7  </h1>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Display table of 7&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+&lt;h1&gt;  &lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+           &lt;input type=&quot;submit&quot; value=&quot;Display table of 7&quot; onClick=&quot;display()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function display()
+          {
+              var i;
+              document.writeln(&quot;table of 7 is as follows:&lt;br&gt;&quot;);
+              for(i=1;i&lt;=10;i++)
+              {
+                document.writeln(&quot;7*&quot;+i+&quot;=&quot;+(7*i)+&quot;&lt;br&gt;&quot;);
+              }
+          }
+     &lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+
+       <form name="f1">
+           <input type="submit" value="Display table of 7" onClick="display()">
+       </form>
+
+    <script language="Javascript">
+          function display()
+          {
+              var i;
+              document.writeln("table of 2 is as follows:<br>");
+              for(i=1;i<=10;i++)
+              {
+                document.writeln("7*"+i+"="+(7*i)+"<br>");
+              }
+          }
+     </script>
+
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

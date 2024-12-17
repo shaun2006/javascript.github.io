@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Greater , less ,or equal 100 </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1>Greater , less ,or equal 100  </h1>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Greater , less ,or equal 100&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+&lt;h1&gt;Greater , less ,or equal 100  &lt;/h1&gt;
+       &lt;h1&gt;greater , less ,or equal 100&lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+          Enter number : &lt;input type=text name=&quot;tnum&quot;&gt;&lt;br&gt;
+          &lt;input type=&quot;submit&quot; value=&quot;check Greater,less or equal 100&quot; onClick=&quot;check()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function check()
+          {
+              var n;
+              n=parseInt(f1.tnum.value);
+             
+              if(n&gt;100)
+              {
+                    document.write(&quot;Entered number is greater than 100&quot;);
+              }
+              else if(n&lt;100)
+              {
+                    document.write(&quot;entered number is less than 100&quot;);
+                    
+              }
+              else
+              {
+                   document.write(&quot;Entered number is equal to 100&quot;);
+              }
+          }
+     &lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+
+       <form name="f1">
+          Enter number : <input type=text name="tnum"><br>
+          <input type="submit" value="check Greater,less or equal 100" onClick="check()">
+       </form>
+
+    <script language="Javascript">
+          function check()
+          {
+              var n;
+              n=parseInt(f1.tnum.value);
+             
+              if(n>100)
+              {
+                    document.write("Entered number is greater than 100");
+              }
+              else if(n<100)
+              {
+                    document.write("entered number is less than 100");
+                    
+              }
+              else
+              {
+                   document.write("Entered number is equal to 100");
+              }
+          }
+     </script>
+
+
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

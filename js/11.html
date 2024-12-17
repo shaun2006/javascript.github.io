@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Addition and of multiplication 3 numbers </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1>Addition and of multiplication 3 numbers  </h1>
+    <pre>
+        <code>
+	&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Addition and of multiplication 3 numbers&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+&lt;h1&gt;Addition and of multiplication 3 numbers&lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+           Enter first number:&lt;input type=&quot;number&quot; name=&quot;nnum1&quot;&gt;&lt;br&gt;
+           Enter second number:&lt;input type=&quot;number&quot; name=&quot;nnum2&quot;&gt;&lt;br&gt;
+           Enter third number:&lt;input type=&quot;number&quot; name=&quot;nnum3&quot;&gt;&lt;br&gt;
+           &lt;input type=&quot;submit&quot; value=&quot;Calculate&quot; onClick=&quot;calculate()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function calculate()
+          {
+              event.preventDefault();
+              var n1,n2,n3,add,mult;
+              n1=parseInt(f1.nnum1.value);
+              n2=parseInt(f1.nnum2.value);
+              n3=parseInt(f1.nnum3.value);
+              add=n1+n2+n3;  
+              mult=n1*n2*n3; 
+  document.writeln(&quot;&lt;br&gt;Addition of entered three numbers=&quot;+add+&quot;&lt;br&gt;multiplication of entered 3 numbers=&quot;+mult);
+          }
+     &lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+
+       <form name="f1">
+           Enter first number:<input type="number" name="nnum1"><br>
+           Enter second number:<input type="number" name="nnum2"><br>
+           Enter third number:<input type="number" name="nnum3"><br>
+           <input type="submit" value="Calculate" onClick="calculate()">
+       </form>
+    <script language="Javascript">
+          function calculate()
+          {
+              event.preventDefault();
+              var n1,n2,n3,add,mult;
+              n1=parseInt(f1.nnum1.value);
+              n2=parseInt(f1.nnum2.value);
+              n3=parseInt(f1.nnum3.value);
+              add=n1+n2+n3;  
+              mult=n1*n2*n3; 
+  document.writeln("<br>Addition of entered three numbers="+add+"<br>multiplication of entered 3 numbers="+mult);
+          }
+     </script>
+
+
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

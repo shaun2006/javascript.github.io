@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>calculate length of the string </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1>calculate length of the string  </h1>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;calculate length of the string&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;calculate length of the string&lt;/h1&gt;
+    &lt;form name=&quot;f1&quot;&gt;
+    
+    &lt;input type=&quot;submit&quot; value=&quot;calculate length&quot; onclick=&quot;length()&quot;&gt;
+    
+    &lt;/form&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    function length()
+        { 
+            event.preventDefault();
+            var str;
+            str=&quot;Information Technology&quot;;
+            document.write(&quot;Length of the string=&quot; + str.length);
+        }
+    &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        
+
+        </code>
+    </pre>
+<br>
+
+    <form name="f1">
+    
+    <input type="submit" value="calculate length" onclick="length()">
+    
+    </form>
+    <script type="text/javascript">
+    function length()
+        { 
+            event.preventDefault();
+            var str;
+            str="Information Technology";
+            document.write("Length of the string=" + str.length);
+        }
+    </script>
+
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

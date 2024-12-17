@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>sum of digits </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1>sum of digits</h1>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;sum of digits&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+	&lt;h1&gt;sum of digits&lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+           Enter 3 digit number:&lt;input type=number name=&quot;nnum&quot; min=100 max=999&gt;
+           &lt;input type=&quot;submit&quot; value=&quot;Display sum of digit&quot; onClick=&quot;display()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function display()
+          {
+              event.preventDefault();
+              var n,sum=0,a;
+              n=f1.nnum.value;
+              while(n&gt;0)
+              {
+                   a=n%10;
+                   sum=sum+a;
+                   n=parseInt(n/10);
+              }
+              document.writeln(&quot;Sum of digit of entered number=&quot;+sum);
+          }
+     &lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+  <form name="f1">
+           Enter 3 digit number:<input type=number name="nnum" min=100 max=999>
+           <input type="submit" value="Display sum of digit" onClick="display()">
+       </form>
+  
+    <script language="Javascript">
+          function display()
+          {
+              event.preventDefault();
+              var n,sum=0,a;
+              n=f1.nnum.value;
+              while(n>0)
+              {
+                   a=n%10;
+                   sum=sum+a;
+                   n=parseInt(n/10);
+              }
+              document.writeln("Sum of digit of entered number="+sum);
+          }
+     </script>
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Display Square of 2 to 10 Numbers </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1>Display Square of 2 to 10 Numbers  </h1>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Display Square of 2 to 10 Numbers&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+&lt;h1&gt;  &lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+           &lt;input type=&quot;submit&quot; value=&quot;Display Square of 2 to 10 Numbers&quot; onClick=&quot;display()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function display()
+          {
+              var i;
+              document.writeln(&quot;Squares of Numbers from 2 to 10 are as follows:&lt;br&gt;&quot;);
+              for(i=2;i&lt;=10;i++)
+              {
+                          document.write(&quot;Square of &quot;+i+&quot;=&quot;+i*i+&quot;&lt;br&gt;&quot;);
+              }
+          }
+     &lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+
+       <form name="f1">
+           <input type="submit" value="Display Square of 2 to 10 Numbers" onClick="display()">
+       </form>
+    <script language="Javascript">
+          function display()
+          {
+              var i;
+              document.writeln("Squares of Numbers from 2 to 10 are as follows:<br>");
+              for(i=2;i<=10;i++)
+              {
+                          document.write("Square of "+i+"="+i*i+"<br>");
+              }
+          }
+     </script>
+
+
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Use of SWICH</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1> Use of SWICH </h1>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Use of SWICH&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+       &lt;h1&gt;Use of SWICH&lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+           Enter value:&lt;input type=&quot;number&quot; name=&quot;nday&quot;&gt;
+           &lt;input type=&quot;submit&quot; value=&quot;Display day&quot; onClick=&quot;display()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function display()
+          {
+              var day;
+              day=f1.nday.value;
+              switch(day)
+              {
+                   case 1:
+                          alert(&quot;MONDAY&quot;);
+                   break;
+                   case 2:
+                          alert(&quot;TUESDAY&quot;);
+                   break;
+	           case 3:
+                          alert(&quot;WEDNESDAY&quot;);
+                   break;
+		   case 4:
+                          alert(&quot;THURSDAY&quot;);
+                   break;
+		   case 5:
+                          alert(&quot;FRIDAY&quot;);
+                   break;
+		   case 6:
+                          alert(&quot;SATURDAY&quot;);
+                   break;
+		   case 7:
+                          alert(&quot;SUNDAY&quot;);
+                   break;
+                   DEFAULT:
+                          alert(&quot;Please enter value between 1 to 7&quot;);
+               }
+          }
+&lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+
+       <form name="f1">
+           Enter value:<input type="number" name="nday">
+           <input type="submit" value="Display day" onClick="display()">
+       </form>
+    <script language="Javascript">
+          function display()
+          {
+              var day;
+              day=f1.nday.value;
+              switch(day)
+              {
+                   case 1:
+                          alert("MONDAY");
+                   break;
+                   case 2:
+                          alert("TUESDAY");
+                   break;
+	           case 3:
+                          alert("WEDNESDAY");
+                   break;
+		   case 4:
+                          alert("THURSDAY");
+                   break;
+		   case 5:
+                          alert("FRIDAY");
+                   break;
+		   case 6:
+                          alert("SATURDAY");
+                   break;
+		   case 7:
+                          alert("SUNDAY");
+                   break;
+                   DEFAULT:
+                          alert("Please enter value between 1 to 7");
+               }
+          }
+</script>
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

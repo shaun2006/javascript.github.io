@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Display Greater number between 2 numbers </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1>Display Greater number between 2 numbers  </h1>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Display Greater number between 2 numbers &lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+       &lt;h1&gt;Display greater number between two numbers&lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+          Enter number 1: &lt;input type=text name=&quot;tnum1&quot;&gt;&lt;br&gt;
+          Enter number 2: &lt;input type=text name=&quot;tnum2&quot;&gt;&lt;b&gt;
+
+           &lt;input type=&quot;submit&quot; value=&quot;find Greater&quot; onClick=&quot;greater()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function greater()
+          {
+              var n1,n2;
+              n1=parseInt(f1.tnum1.value);
+              n2=parseInt(f1.tnum2.value);
+              if(n1&gt;n2)
+              {
+                    document.write(&quot;Number 1&quot;+n1+&quot; is greater&quot;);
+              }
+              else if(n2&gt;n1)
+              {
+                    document.write(&quot;number 1&quot;+n2+&quot;  is greater&quot;);
+                    
+              }
+              else
+              {
+                   document.write(&quot;Both numbers are equal&quot;);
+              }
+          }
+     &lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+       <form name="f1">
+          Enter number 1: <input type=text name="tnum1"><br>
+          Enter number 2: <input type=text name="tnum2"><b>
+
+           <input type="submit" value="find Greater" onClick="greater()">
+       </form>
+
+    <script language="Javascript">
+          function greater()
+          {
+              var n1,n2;
+              n1=parseInt(f1.tnum1.value);
+              n2=parseInt(f1.tnum2.value);
+              if(n1>n2)
+              {
+                    document.write("Number 1"+n1+" is greater");
+              }
+              else if(n2>n1)
+              {
+                    document.write("number 1"+n2+"  is greater");
+                    
+              }
+              else
+              {
+                   document.write("Both numbers are equal");
+              }
+          }
+     </script>
+
+
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

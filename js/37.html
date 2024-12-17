@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>Calculate nth power of 2 </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1> Calculate nth power of 2 </h1>
+    <pre>
+        <code>
+&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+       &lt;title&gt;Calculate nth power of 2&lt;/TITLE&gt;
+   &lt;/HEAD&gt;
+   &lt;body&gt;
+&lt;h1&gt;Calculate nth power of 2&lt;/h1&gt;
+       &lt;form name=&quot;f1&quot;&gt;
+            Enter power of value:&lt;input type=number name=&quot;tpow&quot;&gt;&lt;br&gt;           
+            &lt;input type=&quot;submit&quot; value=&quot;calculate nth power of two&quot; onClick=&quot;display()&quot;&gt;
+       &lt;/form&gt;
+    &lt;/body&gt;
+    &lt;script language=&quot;Javascript&quot;&gt;
+          function display()
+          { 
+              event.preventDefault();
+              var n,p=1;
+              n=f1.tpow.value;
+              //alert(&quot;entered number=&quot;+n);
+              for(i=1;i&lt;=n;i++)
+              {
+                 p=p*2;
+              }
+              document.writeln(&quot;2^&quot;+n+&quot;=&quot;+p);
+          }
+     &lt;/script&gt;
+&lt;/html&gt;
+
+
+        </code>
+    </pre>
+<br>
+       <form name="f1">
+            Enter power of value:<input type=number name="tpow"><br>           
+            <input type="submit" value="calculate nth power of two" onClick="display()">
+       </form>
+
+    <script language="Javascript">
+          function display()
+          { 
+              event.preventDefault();
+              var n,p=1;
+              n=f1.tpow.value;
+              //alert("entered number="+n);
+              for(i=1;i<=n;i++)
+              {
+                 p=p*2;
+              }
+              document.writeln("2^"+n+"="+p);
+          }
+     </script>
+
+
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>

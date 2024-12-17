@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale-1.0">
+
+<title>check pincode is number or not </title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/stackoverflow-dark.min.css">
+<link rel="stylesheet" href="../css/jsstyle.css"> <!-- Link to the external CSS file -->
+
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        hljs.highlightAll();
+
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            // Create copy button
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.innerText = 'Copy Code';
+
+            // Add copy functionality
+            button.addEventListener('click', () => {
+                const code = codeBlock.innerText;
+                navigator.clipboard.writeText(code).then(() => {
+                    button.innerText = 'Code Copied!';
+                    setTimeout(() => {
+                        button.innerText = 'Copy';
+                    }, 2000);
+                });
+            });
+
+            // Append button to the pre element
+            const pre = codeBlock.parentElement;
+            pre.appendChild(button);
+        });
+    });
+</script>
+
+<body>
+    <h1> check pincode is number or not </h1>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;check pincode is number or not&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;Check Pincode is number or not&lt;/h1&gt;
+    &lt;form name=&quot;f1&quot;&gt;
+    Enter the Pincode:- &lt;input type=text name=&quot;tpin&quot; required&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;check&quot; onclick=&quot;check()&quot;&gt;
+    &lt;input type=&quot;reset&quot; value=&quot;Clear&quot; alt=&quot;Clear the search form&quot;&gt;&lt;br&gt;
+   
+    &lt;/form&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    function check()
+        { 
+            event.preventDefault();
+            var p;
+            p = f1.tpin.value;
+            if(isNaN(p))
+            {
+                  alert(&quot;Entered Pincode is not a number&quot;);
+            }
+            else
+            {
+                  alert(&quot;Entered pincode is number&quot;);
+            }
+            
+        }
+    &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        
+
+        </code>
+    </pre>
+<br>
+
+    <form name="f1">
+    Enter the Pincode:- <input type=text name="tpin" required><br>
+    <input type="submit" value="check" onclick="check()">
+    <input type="reset" value="Clear" alt="Clear the search form"><br>
+   
+    </form>
+    <script type="text/javascript">
+    function check()
+        { 
+            event.preventDefault();
+            var p;
+            p = f1.tpin.value;
+            if(isNaN(p))
+            {
+                  alert("Entered Pincode is not a number");
+            }
+            else
+            {
+                  alert("Entered pincode is number");
+            }
+            
+        }
+    </script>
+
+        
+
+<br>
+<a href="../index.html">Go back</a>
+</body>
+</html>
